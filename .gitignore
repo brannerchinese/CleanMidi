@@ -1,7 +1,7 @@
 *.wav
 *.mp3
-*.mcsz
-*.mcsx
+*.mscz
+*.mscx
 *.raw
 *.mid
 *.csv
