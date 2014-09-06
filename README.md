@@ -24,8 +24,9 @@ The Python script in this project must be counted a failure, but I learned quite
 
    Note that there are many options for WaoN. I have used `-n` to select note-length and `-t` and `-b` to restrict the transcribed range to what appears to be the actual range used by the singer in this recording:
 
-        waon -n 8192 -t 67 -b 52 -i ../recordings/白居易、琵琶行並序_lines_01-08.wav \
-        -o ../midi/白居易、琵琶行並序_lines_01-08_n_8196_t_67_b_52.mid
+        waon -n 8192 -t 67 -b 52 \
+        -i recordings/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08.wav \
+        -o midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_8196_t_67_b_52.mid
 
    But bear in mind that when restricting the transcribed range I have had segmentation faults with lower values of `-n`, which in some ways give the most useful results.
    
@@ -33,7 +34,7 @@ The Python script in this project must be counted a failure, but I learned quite
 
         $ waon -n 1024 \
         -i recordings/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08.wav \
-        -o midi/16_白居易、琵琶行並序_lines_01-08_n_1024.mid
+        -o midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_1024.mid
         Format: Microsoft WAV format (little endian default).
         Subtype: Signed 16 bit data
         Endian type: Default file endian-ness.
@@ -46,7 +47,7 @@ The Python script in this project must be counted a failure, but I learned quite
         division = 86
         WaoN : # of events = 2120
         WAON_notes : n = 2120
-        filename : midi/16_白居易、琵琶行並序_lines_01-08_n_1024.mid
+        filename : midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_1024.mid
         $ 
 
  1. Convert `.mid` to editable `.csv`:
