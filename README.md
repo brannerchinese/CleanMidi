@@ -32,8 +32,8 @@ The script must be counted a failure, but I learned quite a lot by writing it. T
         -i recordings/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08.wav \
         -o midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_8196_t_67_b_52.mid
 
-   But bear in mind that when restricting the transcribed range I have had segmentation faults with lower values of `-n`, which in some ways give more interesting results.
-   
+   But bear in mind that when restricting the transcribed range I have had segmentation faults with lower values of `-n`, which otherwise give more interesting results.
+
    Output looks like this:
 
         $ waon -n 1024 \
