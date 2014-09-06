@@ -55,11 +55,11 @@ The Python script in this project must be counted a failure, but I learned quite
 
  1. Run `clean_midi.py`, to isolate only the highest-velocity note at any time-tick:
 
-        python code/clean_midi <filename.csv>
+        python code/clean_midi.py <filename.csv>
 
    or
 
-        python code/clean_midi
+        python code/clean_midi.py
 
    for default input filename `output.csv` and output `output_edited.csv`. Program looks in directory `midi` for these files, so don't include the directory name in your input.
 
