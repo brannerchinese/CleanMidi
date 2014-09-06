@@ -1,6 +1,10 @@
-## Cantillation-related studies
+## Produce and clean a MIDI file from an audio recording
 
-The Python script in this project must be counted a failure, but I learned quite a lot by writing it. The results are actually somewhat better using WaoN output directly, without the use of my script. 
+Problem: Given a recording of solo voice singing, produce a MIDI version of it, from which transcription in traditional musical notation can be produced.
+
+Summary: The Python script in this project must be counted a failure, but I learned quite a lot by writing it. The results are actually somewhat better using WaoN output directly, without the use of my script.
+
+Tremolo in the singer's voice and slight revereration in the recording make this a hard, hard business. I suspect I will have better results transcribing manually — computer-aided transcription seems the best way to proceed.
 
 ### Non-Python requirements
 
@@ -9,9 +13,9 @@ The Python script in this project must be counted a failure, but I learned quite
  1. [Fluidsynth](https://sourceforge.net/apps/trac/fluidsynth/): generate raw soundfile from a MIDI. Installation instructions at http://apple.stackexchange.com/questions/107297/how-can-i-play-a-midi-file-from-terminal:
      1. Download [`GeneralUser` SoundFont](http://www.schristiancollins.com/generaluser.php).
      1. Rename file `GeneralUser GS FluidSynth v1.44.sf2` to `GeneralUser_GS_FluidSynth_v1.44.sf2` and move it to location of `fluidsynth` install (which is a symlink, so follow that link to the directory's true location).
- 1. [SoX (Sound eXchange](http://sox.sourceforge.net/): convert raw soundfile to `.wav` etc.
+ 1. [SoX (Sound eXchange](http://sox.sourceforge.net/): convert raw sound file to `.wav`, `.mp3`, etc.
 
-### Background on MIDI
+### Background on MIDI format
 
  1. http://www.midi.org/techspecs/midimessages.php
  1. http://www.sonicspot.com/guide/midifiles.html
@@ -85,8 +89,6 @@ The Python script in this project must be counted a failure, but I learned quite
 
    On my system (Mac OS 10.9.4) I am specifying the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`. Fluidsynth plus this long option-input can be saved to an alias or written into a script.
 
-What I have heard so far is poor, but actually better than hand-transcribed material I paid for. (Possibly the transcriber was also using automated processes.) The least bad of the many bad output files in the samples here is probably `16_白居易、琵琶行並序_lines_01-08_n_1024_s_512.mid`. However, I frankly think the WaoN output without Python processing is less bad than it. 
-
-Tremolo in the singer's voice and slight revereration in the recording make this a hard, hard business. I suspect I will have better results transcribing manually — computer-aided transcription seems the best way to proceed.
+What I have heard so far is poor, but actually better than hand-transcribed material I paid for for comparison. (Possibly the transcriber was also using automated processes.) The least bad of the many bad output files in the samples here is probably `midi/16_白居易、琵琶行並序_lines_01-08_n_1024_s_512.mid`. However, I frankly think the WaoN output without Python processing is less bad than it — see for instance `midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_1024.mid` and `midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_8196_t_67_b_52.mid`. 
 
 [end]
