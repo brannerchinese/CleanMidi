@@ -25,7 +25,7 @@
         waon -n 8192 -t 67 -b 52 -i ../recordings/白居易、琵琶行並序_lines_01-08.wav \
         -o ../midi/白居易、琵琶行並序_lines_01-08_n_8196_t_67_b_52.mid
 
-   But bear in mind that I have had segmentation faults with lower values of `-n`.
+   But bear in mind that when restricting the transcribed range I have had segmentation faults with lower values of `-n`, which in some ways give the most useful results.
 
  1. Convert `.mid` to editable `.csv`:
 
@@ -39,11 +39,13 @@
 
         python clean_midi
 
-   for default input filename `output.csv` and output `output_edited.csv`.
+   for default input filename `output.csv` and output `output_edited.csv`. Program looks in directory `midi` for these files, so don't include the directory name in your input.
 
  1. Convert `.csv` to `.mid`:
  
-        csvmidi output_edited.csv > output.csv.mid
+        csvmidi midi/output_edited.csv > midi/output.csv.mid
+
+   Some errors are generated here of the form "Events out of order; this event is before the previous..". I have not yet looked at what is causing this.
 
  1. Play MIDI file:
 
@@ -54,7 +56,12 @@
         fluidsynth -i <soundfont> <MIDI file> -F <raw_file.raw>
         sox -t raw -r 44100 -e signed -b 16 -c 1 <raw_file.raw> <sound_file.wav>
 
-What I have heard so far is poor, but actually better than hand-transcribed material I paid for. Possibly the transcriber was also using automated processes.
+   or
 
+        sox -t raw -r 44100 -e signed -b 16 -c 1 <raw_file.raw> <sound_file.mp3>
+
+   On my system (Mac OS 10.9.4) I am specifying the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`.
+
+What I have heard so far is poor, but actually better than hand-transcribed material I paid for. Possibly the transcriber was also using automated processes.
 
 [end]
