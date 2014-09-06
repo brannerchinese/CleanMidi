@@ -1,10 +1,10 @@
 ## Produce and clean a MIDI file from an audio recording
 
-**Problem**: Given a recording of solo voice singing, produce a MIDI version of it, from which transcription in traditional musical notation can be produced.
+**Problem**: Given a recording of solo voice singing, produce a clean MIDI version of it, from which transcription in traditional musical notation can be produced.
 
-**Summary**: The Python script in this project must be counted a failure, but I learned quite a lot by writing it. The results are actually somewhat better using WaoN output directly, without the use of my script.
+**Summary**: Tremolo in the singer's voice and slight reverberation in the recordings make this a hard, hard business. A base MIDI file is produced with WaoN and then processed with a Python script. 
 
-Tremolo in the singer's voice and slight revereration in the recording make this a hard, hard business. I suspect I will have better results transcribing manually — computer-aided transcription seems the best way to proceed.
+The script must be counted a failure, but I learned quite a lot by writing it. The results are actually somewhat better using WaoN output directly. I suspect I will have better results transcribing manually — computer-aided transcription seems the best way to proceed.
 
 ### Non-Python requirements
 
