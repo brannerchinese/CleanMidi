@@ -85,6 +85,8 @@ The Python script in this project must be counted a failure, but I learned quite
 
    On my system (Mac OS 10.9.4) I am specifying the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`. Fluidsynth plus this long option-input can be saved to an alias or written into a script.
 
-What I have heard so far is poor, but actually better than hand-transcribed material I paid for. (Possibly the transcriber was also using automated processes.) The least bad of the many bad output files in the samples here is probably `16_白居易、琵琶行並序_lines_01-08_n_1024_s_512.mid`.
+What I have heard so far is poor, but actually better than hand-transcribed material I paid for. (Possibly the transcriber was also using automated processes.) The least bad of the many bad output files in the samples here is probably `16_白居易、琵琶行並序_lines_01-08_n_1024_s_512.mid`. However, I frankly think the WaoN output without Python processing is less bad than it. 
+
+Tremolo in the singer's voice and slight revereration in the recording make this a hard, hard business. I suspect I will have better results transcribing manually — computer-aided transcription seems the best way to proceed.
 
 [end]
