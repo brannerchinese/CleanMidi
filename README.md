@@ -1,5 +1,7 @@
 ## Cantillation-related studies
 
+The Python script in this project must be counted a failure, but I learned quite a lot by writing it.
+
 ### Non-Python requirements
 
  1. [WaoN](https://github.com/kichiki/WaoN) for converting `.wav` to `.mid` (MIDI). (Available through HomeBrew.) Note that SoX does not currently support conversion to MIDI.
