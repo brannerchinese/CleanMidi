@@ -4,7 +4,7 @@ The Python script in this project must be counted a failure, but I learned quite
 
 ### Non-Python requirements
 
- 1. [WaoN](https://github.com/kichiki/WaoN) for converting `.wav` to `.mid` (MIDI). (Available through HomeBrew.) Note that SoX does not currently support conversion to MIDI.
+ 1. [WaoN](https://github.com/kichiki/WaoN) for converting `.wav` to `.mid` (MIDI). (Available through HomeBrew.) Note that SoX does not currently support conversion to MIDI. WaoN renders 和音 'chord' or 'melodious sounds' in Japanese (also 'Japanese sounds').
  1. [MIDICSV](http://www.fourmilab.ch/webtools/midicsv/) (includes CSVMIDI) for conversion between `.mid` MIDI files and text-editable `.csv` files. (Available through HomeBrew.)
  1. [Fluidsynth](https://sourceforge.net/apps/trac/fluidsynth/): generate raw soundfile from a MIDI. Installation instructions at http://apple.stackexchange.com/questions/107297/how-can-i-play-a-midi-file-from-terminal:
      1. Download [`GeneralUser` SoundFont](http://www.schristiancollins.com/generaluser.php).
@@ -28,7 +28,7 @@ The Python script in this project must be counted a failure, but I learned quite
         -i recordings/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08.wav \
         -o midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_8196_t_67_b_52.mid
 
-   But bear in mind that when restricting the transcribed range I have had segmentation faults with lower values of `-n`, which in some ways give the most useful results.
+   But bear in mind that when restricting the transcribed range I have had segmentation faults with lower values of `-n`, which in some ways give more interesting results.
    
    Output looks like this:
 
