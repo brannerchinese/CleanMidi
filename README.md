@@ -10,7 +10,7 @@ The script must be counted a failure, but I learned quite a lot by writing it. T
 
  1. [WaoN](https://github.com/kichiki/WaoN) for converting `.wav` to `.mid` (MIDI). (Available through HomeBrew.) Note that SoX does not currently support conversion to MIDI. WaoN renders 和音 'chord' or 'melodious sounds' in Japanese (also 'Japanese sounds').
  1. [MIDICSV](http://www.fourmilab.ch/webtools/midicsv/) (includes CSVMIDI) for conversion between `.mid` MIDI files and text-editable `.csv` files. (Available through HomeBrew.)
- 1. [Fluidsynth](https://sourceforge.net/apps/trac/fluidsynth/): generate raw soundfile from a MIDI. To prepare:
+ 1. [FluidSynth](https://sourceforge.net/apps/trac/fluidsynth/): generate raw soundfile from a MIDI. Requires a SoundFont; to prepare that:
      1. Download [`GeneralUser` SoundFont](http://www.schristiancollins.com/generaluser.php).
      1. Rename file `GeneralUser GS FluidSynth v1.44.sf2` to `GeneralUser_GS_FluidSynth_v1.44.sf2` and move it to location of `fluidsynth` install (which is a symlink, so follow that link to the directory's true location).
  1. [SoX (Sound eXchange](http://sox.sourceforge.net/): convert raw sound file to `.wav`, `.mp3`, etc.
@@ -87,7 +87,7 @@ The script must be counted a failure, but I learned quite a lot by writing it. T
 
         sox -t raw -r 44100 -e signed -b 16 -c 1 <raw_file.raw> <sound_file.mp3>
 
-   On my system (Mac OS 10.9.4) I am specifying the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`. Fluidsynth plus this long option-input can be saved to an alias or written into a script.
+   On my system (Mac OS 10.9.4) I always specify the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`. FluidSynth plus this long option-input can be saved to an alias or written into a script.
 
 What I have heard so far is poor, but actually better than hand-transcribed material I paid for for comparison. (Possibly the transcriber was also using automated processes.) The least bad of the many bad output files in the samples here is probably `midi/16_白居易、琵琶行並序_lines_01-08_n_1024_s_512.mid`. However, I frankly think the WaoN output without Python processing is less bad than it — see for instance `midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_1024.mid` and `midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_8196_t_67_b_52.mid`. 
 
