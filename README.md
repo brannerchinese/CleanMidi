@@ -1,5 +1,7 @@
 ## Cantillation-related studies
 
+The Python script in this project must be counted a failure, but I learned quite a lot by writing it.
+
 ### Non-Python requirements
 
  1. [WaoN](https://github.com/kichiki/WaoN) for converting `.wav` to `.mid` (MIDI). (Available through HomeBrew.) Note that SoX does not currently support conversion to MIDI.
@@ -22,16 +24,17 @@
 
    Note that there are many options for WaoN. I have used `-n` to select note-length and `-t` and `-b` to restrict the transcribed range to what appears to be the actual range used by the singer in this recording:
 
-        waon -n 8192 -t 67 -b 52 -i ../recordings/白居易、琵琶行並序_lines_01-08.wav \
-        -o ../midi/白居易、琵琶行並序_lines_01-08_n_8196_t_67_b_52.mid
+        waon -n 8192 -t 67 -b 52 \
+        -i recordings/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08.wav \
+        -o midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_8196_t_67_b_52.mid
 
    But bear in mind that when restricting the transcribed range I have had segmentation faults with lower values of `-n`, which in some ways give the most useful results.
    
    Output looks like this:
 
-        $ waon -n 768 \
+        $ waon -n 1024 \
         -i recordings/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08.wav \
-        -o midi/16_白居易、琵琶行並序_lines_01-08_n_768.mid
+        -o midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_1024.mid
         Format: Microsoft WAV format (little endian default).
         Subtype: Signed 16 bit data
         Endian type: Default file endian-ness.
@@ -44,7 +47,7 @@
         division = 86
         WaoN : # of events = 2120
         WAON_notes : n = 2120
-        filename : midi/16_白居易、琵琶行並序_lines_01-08_n_1024.mid
+        filename : midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_1024.mid
         $ 
 
  1. Convert `.mid` to editable `.csv`:
@@ -53,11 +56,11 @@
 
  1. Run `clean_midi.py`, to isolate only the highest-velocity note at any time-tick:
 
-        python code/clean_midi <filename.csv>
+        python code/clean_midi.py <filename.csv>
 
    or
 
-        python code/clean_midi
+        python code/clean_midi.py
 
    for default input filename `output.csv` and output `output_edited.csv`. Program looks in directory `midi` for these files, so don't include the directory name in your input.
 
