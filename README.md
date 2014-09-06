@@ -89,6 +89,8 @@ The script must be counted a failure, but I learned quite a lot by writing it. T
 
    On my system (Mac OS 10.9.4) I always specify the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`. FluidSynth plus this long option-input can be saved to an alias or written into a script.
 
+### Last reflections
+
 What I have heard so far is poor, but actually better than hand-transcribed material I paid for for comparison. (Possibly the transcriber was also using automated processes.) I frankly think the WaoN output without Python processing is less bad than it — see for instance
 
  * `midi/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08_n_1024_s_512.mid`
