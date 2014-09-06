@@ -26,6 +26,26 @@
         -o ../midi/白居易、琵琶行並序_lines_01-08_n_8196_t_67_b_52.mid
 
    But bear in mind that when restricting the transcribed range I have had segmentation faults with lower values of `-n`, which in some ways give the most useful results.
+   
+   Output looks like this:
+
+        $ waon -n 768 \
+        -i recordings/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08.wav \
+        -o midi/16_白居易、琵琶行並序_lines_01-08_n_768.mid
+        Format: Microsoft WAV format (little endian default).
+        Subtype: Signed 16 bit data
+        Endian type: Default file endian-ness.
+        frames     : 2161441
+        samplerate : 44100
+        channels   : 2
+        sections   : 1
+        seekable   : 1
+        WaoN : end of file.
+        division = 86
+        WaoN : # of events = 2120
+        WAON_notes : n = 2120
+        filename : midi/16_白居易、琵琶行並序_lines_01-08_n_1024.mid
+        $ 
 
  1. Convert `.mid` to editable `.csv`:
 
@@ -33,11 +53,11 @@
 
  1. Run `clean_midi.py`, to isolate only the highest-velocity note at any time-tick:
 
-        python clean_midi <filename.csv>
+        python code/clean_midi <filename.csv>
 
    or
 
-        python clean_midi
+        python code/clean_midi
 
    for default input filename `output.csv` and output `output_edited.csv`. Program looks in directory `midi` for these files, so don't include the directory name in your input.
 
@@ -45,7 +65,7 @@
  
         csvmidi midi/output_edited.csv > midi/output.csv.mid
 
-   Some errors are generated here of the form "Events out of order; this event is before the previous..". I have not yet looked at what is causing this.
+   Some errors may be generated here of the form "Events out of order; this event is before the previous..". I have not yet looked at what is causing this.
 
  1. Play MIDI file:
 
@@ -60,7 +80,7 @@
 
         sox -t raw -r 44100 -e signed -b 16 -c 1 <raw_file.raw> <sound_file.mp3>
 
-   On my system (Mac OS 10.9.4) I am specifying the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`.
+   On my system (Mac OS 10.9.4) I am specifying the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`. Fluidsynth plus this long option-input can be saved to an alias or written into a script.
 
 What I have heard so far is poor, but actually better than hand-transcribed material I paid for. Possibly the transcriber was also using automated processes.
 
