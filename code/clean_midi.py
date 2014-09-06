@@ -3,6 +3,8 @@
 # David Prager Branner
 # 20140905, works.
 
+"""Clean MIDI-CSV file: retain the note with highest velocity at any time."""
+
 import sys
 if sys.version_info.major < 3:
     print('Python 3 is required. You are using {}.{}.'.
@@ -13,7 +15,7 @@ import heapq as H
 import pprint
 
 def main(filename='output.csv'):
-    with open(os.path.join('..', 'midi', filename), 'r') as f:
+    with open(os.path.join('midi', filename), 'r') as f:
         content = f.read()
     # Extract only lines containing "Note_" and store in "received_events".
     received_events = [tuple(item.split(', '))
@@ -74,9 +76,14 @@ def main(filename='output.csv'):
     body = '\n'.join([', '.join(event) for event in final_melody])
     content = head + body + '\n' + tail
     filename = filename.split('.')[0] + '_edited.csv'
-    with open(os.path.join('..', 'midi', filename), 'w') as f:
-        f.write(content)
-    pprint.pprint(content)
+    try:
+        with open(os.path.join('midi', filename), 'w') as f:
+            f.write(content)
+#        pprint.pprint(content) # debug
+        print('\nContent cleaned and saved to file\n\n    midi/{}\n'.
+                format(filename))
+    except Exception as e:
+        print('Content cleaned but failed to save; error "{}"'.format(e))
 
 
 if __name__ == '__main__':
