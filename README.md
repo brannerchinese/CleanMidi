@@ -10,7 +10,7 @@ The script must be counted a failure, but I learned quite a lot by writing it. T
 
  1. [WaoN](https://github.com/kichiki/WaoN) for converting `.wav` to `.mid` (MIDI). (Available through HomeBrew.) Note that SoX does not currently support conversion to MIDI. WaoN renders 和音 'chord' or 'melodious sounds' in Japanese (also 'Japanese sounds').
  1. [MIDICSV](http://www.fourmilab.ch/webtools/midicsv/) (includes CSVMIDI) for conversion between `.mid` MIDI files and text-editable `.csv` files. (Available through HomeBrew.)
- 1. [Fluidsynth](https://sourceforge.net/apps/trac/fluidsynth/): generate raw soundfile from a MIDI. Installation instructions at http://apple.stackexchange.com/questions/107297/how-can-i-play-a-midi-file-from-terminal:
+ 1. [Fluidsynth](https://sourceforge.net/apps/trac/fluidsynth/): generate raw soundfile from a MIDI. To prepare:
      1. Download [`GeneralUser` SoundFont](http://www.schristiancollins.com/generaluser.php).
      1. Rename file `GeneralUser GS FluidSynth v1.44.sf2` to `GeneralUser_GS_FluidSynth_v1.44.sf2` and move it to location of `fluidsynth` install (which is a symlink, so follow that link to the directory's true location).
  1. [SoX (Sound eXchange](http://sox.sourceforge.net/): convert raw sound file to `.wav`, `.mp3`, etc.
