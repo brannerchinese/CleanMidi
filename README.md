@@ -29,9 +29,9 @@
    
    Output looks like this:
 
-        $ waon -n 768 \
+        $ waon -n 1024 \
         -i recordings/16_白居易、琵琶行並序、許禕娗_chanting_lines_01-08.wav \
-        -o midi/16_白居易、琵琶行並序_lines_01-08_n_768.mid
+        -o midi/16_白居易、琵琶行並序_lines_01-08_n_1024.mid
         Format: Microsoft WAV format (little endian default).
         Subtype: Signed 16 bit data
         Endian type: Default file endian-ness.
