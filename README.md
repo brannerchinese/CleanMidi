@@ -2,7 +2,7 @@
 
 **Problem**: Given a recording of solo voice singing, produce a clean MIDI version of it, from which transcription in traditional musical notation can be produced.
 
-**Summary**: Tremolo in the singer's voice and slight reverberation in the recordings make this a hard, hard business. A base MIDI file is produced with WaoN and then processed with a Python script. 
+**Summary**: Tremolo in the singer's voice and slight reverberation in the recordings make this a hard, hard business. A base MIDI file is produced with WaoN and then processed with a Python script. There are Python modules for manipulating MIDI directly, but I didn't know about those at the time I did this little project.
 
 The script must be counted a failure, but I learned quite a lot by writing it. The results are actually somewhat better using WaoN output directly. I suspect I will have better results transcribing manually — computer-aided transcription seems the best way to proceed.
 
