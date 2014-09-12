@@ -203,13 +203,12 @@
           <p>New idea</p>
           <ul class="incremental">
             <li>Can we clean MIDI with Python?</li>
-            <li>There are MIDI modules for Python, but I felt a purer approach would be to convert MIDI to text (using <a href="http://www.fourmilab.ch/webtools/midicsv/" target="_blank">MIDICSV</a>) and write a script to discard all but the notes with highest “note-on velocity” (playback volume and intensity).</li>
+            <li>There are MIDI modules for Python, but I felt a purer approach would be to convert MIDI to text (using <a href="http://www.fourmilab.ch/webtools/midicsv/" target="_blank">MIDICSV</a>) and write a script to discard all but the notes with highest “note-on velocity” (playback volume and intensity). I used a priority queue to hold notes and selected the highest-velocity note at each time-tick.</li>
             <li>
               <table>
-                <tr class="datarow"><td>Result: </td><td><audio controls><source src="../recordings/pyiparshyng_hsu_i_ting_lines_01-02_n_8196_t_67_b_52_MIDI_edited.mp3" type="audio/mpeg">Audio unsupported.</audio></td></tr>
+                <tr class="datarow"><td>Result: </td><td><audio controls><source src="../recordings/pyiparshyng_hsu_i_ting_lines_01-02_n_8196_t_67_b_52_MIDI_edited.mp3" type="audio/mpeg">Audio unsupported.</audio> Still terrible!</td></tr>
               </table>
             </li>
-            <li>Still terrible!</li>
         </div>
       </div>
 
