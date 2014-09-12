@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <!-- This file composed  by David Prager Branner and edited 20140911. -->
+    <title>Transcribing a Solo Voice Recording to Western Musical Notation</title>
+    <base target="_blank">
+    <!-- metadata -->
+    <meta charset='utf-8' />
+    <meta name="generator" content="S5" />
+    <meta name="version" content="S5 1.1" />
+    <meta name="presdate" content="20050728" />
+    <meta name="author" content="Eric A. Meyer" />
+    <meta name="company" content="Complex Spiral Consulting" /> 
+    <!-- configuration parameters --> 
+    <meta name="defaultView" content="slideshow" /> 
+    <meta name="controlVis" content="hidden" /> 
+    <!-- style sheet links for when accessed on disk --> 
+    <link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+    <link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" /> 
+    <link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" /> 
+    <link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" /> 
+    <!-- S5 JS for when accessed on disk -->
+    <script src="ui/default/slides.js" type="text/javascript"> </script> 
+    <!-- DPB's own style sheet links for when accessed on disk -->
+    <link rel="stylesheet" href="ui/default/branner.css" type="text/css" />
+  </head> 
+
+  <body>
+
+    <div class="layout">
+      <div id="controls"><!-- DO NOT EDIT --></div>
+      <div id="currentSlide"><!-- DO NOT EDIT --></div>
+      <div id="header"></div>
+      <div id="footer">
+        <h1>Branner, “Transcribing a Solo Voice Recording to Western Musical Notation”</h1> 
+        <h2>Hacker School, 11 September, 2014</h2>
+      </div> 
+    </div>
+
+    <div class="presentation">
+
+      <div class="slide">
+        <h1>Transcribing a Solo Voice Recording to Western Musical Notation</h1>
+        <h2>(a failed attempt)</h2>
+        <h3>David Prager Branner</h3>
+        <h4>Hacker School<br>11 September, 2014</h4>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>Goal</p>
+          <ul class="incremental">
+            <li>To transcribe solo-voice melody automatically.</li>
+            <li>The recording is of Taiwanese cantillation: read classical poem in “reading pronunciation” (different from spoken language), elaborate the tones of the words into a melody.</li>
+            <li>The poem is the “Ballad of the Lute” (<i>pípá xíng</i> 琵琶行) of Bái Jūyì 白居易 (772–846).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>First listen to the opening eight lines (of eighty-eight):</p>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>潯陽江頭夜送客</td></tr>
+            <tr><td>Taiwanese: </td><td>sîm-iông-kang-thiô || iā-sòng-khek</td></tr>
+            <tr><td></td><td class="translation">Seeing off a guest by night 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at Sîmiông River’s edge —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr class="datarow"><td><audio controls><source src="../recordings/pyiparshyng_hsu_i_ting_lines_01-08_110-150kbps.mp3" type="audio/mpeg">Audio unsupported.</audio></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>&nbsp;</p>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>楓葉荻花秋瑟瑟</td></tr>
+            <tr><td>Taiwanese: </td><td>hong-ia̍p te̍k-hoa || chhiu sek-sek</td></tr>
+            <tr><td></td><td class="translation">‘Seksek’ went the wind, 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through sweetgum leaves, 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through silver-grass blossoms —</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>&nbsp;</p>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>主人下馬客在船</td></tr>
+            <tr><td>Taiwanese: </td><td>chú-lîn || hā-má khek chāi-sôan</td></tr>
+            <tr><td></td><td class="translation">The host dismounted;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at boatside was the guest —</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>&nbsp;</p>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>舉酒欲飲無管弦</td></tr>
+            <tr><td>Taiwanese: </td><td>kú-chiú || io̍k-ím bû-kóan-hiân</td></tr>
+            <tr><td></td><td class="translation">They raised their wine to drink;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;no flutes or strings there were —</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>&nbsp;</p>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>醉不成歡慘將別</td></tr>
+            <tr><td>Taiwanese: </td><td>chuì put-sêng-hoan || chhám tsiong-pia̍t</td></tr>
+            <tr><td></td><td class="translation">Drunk, but not to the point of happiness — 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;miserable at parting —</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>&nbsp;</p>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>別時茫茫江浸月</td></tr>
+            <tr><td>Taiwanese: </td><td>pia̍t-sî bông-bông || kang-chhim-go̍at</td></tr>
+            <tr><td></td><td class="translation">Vast it seemed, at parting — 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;river drenched moon —</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>&nbsp;</p>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>忽聞水上琵琶聲</td></tr>
+            <tr><td>Taiwanese: </td><td>hut-bûn || suí-siōng pî-pâ-seng</td></tr>
+            <tr><td></td><td class="translation">Suddenly was heard
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the sound of a lute on the waters —</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>&nbsp;</p>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>主人忘歸客不發</td></tr>
+            <tr><td>Taiwanese: </td><td>chú-lîn bông-kui || khek put-hoat</td></tr>
+            <tr><td></td><td class="translation">The host forgot about going back;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the guest did not set off —</td></tr>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="slide">
+        <div>
+          <p>First attempt</p>
+          <ul class="incremental">
+            <li>After many experiments, settled on <a href="https://github.com/kichiki/WaoN" target="_blank">WaoN</a>) (和音 ‘harmonious notes’), an open-source command-line tool for converting convert .wav files into MIDI.</li>
+            <li>Heard here converted to MP3 via <a href="https://sourceforge.net/apps/trac/fluidsynth/" target="_blank">FluidSynth</a>) using the <a href="http://www.schristiancollins.com/generaluser.php" target="_blank">“GeneralUser” SoundFont</a> (lines 1-2 only). It models the sound of the piano, and I judge it less unpleasant than most other SoundFonts for analytical purposes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>First attempt</p>
+          <ul class="incremental">
+            <li>
+              <table>
+                <tr class="datarow"><td>Result: </td><td><audio controls><source src="../recordings/pyiparshyng_hsu_i_ting_lines_01-02_n_1024_MIDI.mp3" type="audio/mpeg">Audio unsupported.</audio></td></tr>
+              </table>
+            </li>
+            <li>Terrible! Tremolo in the voice and reverb in the recording lead to chords or trills in MIDI transcription. Stray notes abound.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>Second attempt</p>
+          <ul class="incremental">
+          <li>For comparison, I also paid a professional transcriber to produce a transcription (here, lines 1-2 only).</li>
+            <li>
+              <table>
+                <tr class="datarow"><td>Professional transcription: </td><td><audio controls><source src="../recordings/pyiparshyng_hsu_i_ting_lines_01-02_paid_transcription.mp3" type="audio/mpeg">Audio unsupported.</audio></td></tr>
+              </table>
+            </li>
+          <li>Is this significantly better than the WaoN version? (The paid transcriber relied on <a href="http://www.finalemusic.com/" target="_blank">Finale 2011</a> and professional training.)</li>
+          <li>It seems to me that the WaoN version is truer to the feeling of the music, though the paid transcriber’s has fewer notes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>New idea</p>
+          <ul class="incremental">
+            <li>Can we clean MIDI with Python?</li>
+            <li>There are MIDI modules for Python, but I felt a purer approach would be to convert MIDI to text (using <a href="http://www.fourmilab.ch/webtools/midicsv/" target="_blank">MIDICSV</a>) and write a script to discard all but the notes with highest “note-on velocity” (playback volume and intensity).</li>
+            <li>
+              <table>
+                <tr class="datarow"><td>Result: </td><td><audio controls><source src="../recordings/pyiparshyng_hsu_i_ting_lines_01-02_n_8196_t_67_b_52_MIDI_edited.mp3" type="audio/mpeg">Audio unsupported.</audio></td></tr>
+              </table>
+            </li>
+            <li>Still terrible!</li>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <p>Finally</p>
+          <ul class="incremental">
+            <li>Eventually I learned to use <a href="http://musescore.org/" target="_blank">MuseScore</a>, an open source program for music transcription, with export to MIDI, MXL (<a href="http://www.musicxml.com/UserManuals/MusicXML/MusicXML.htm#XS-MusicXML.htm" target="_blank">MusicXML</a>), and many other formats.</li>
+            <li>The human brain seems to have won this round. I learned a lot by making the attempt, though.</li>
+            <li>Below is the MuseScore transcription and play-back (first eight lines of the poem).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>潯陽江頭夜送客</td></tr>
+            <tr><td>Taiwanese: </td><td>sîm-iông-kang-thiô || iā-sòng-khek</td></tr>
+            <tr><td></td><td class="translation">Seeing off a guest by night 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at Sîmiông River’s edge —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr><td><img src="images/pyiparshyng_transcription_01.png"></td></tr>
+            <tr class="datarow"><td><audio controls><source src="../recordings/pyiparshyng_hsu_i_ting_lines_01-08_manual_on_musescore_110-150kbps_b.mp3" type="audio/mpeg">Audio unsupported.</audio></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>楓葉荻花秋瑟瑟</td></tr>
+            <tr><td>Taiwanese: </td><td>hong-ia̍p te̍k-hoa || chhiu sek-sek</td></tr>
+            <tr><td></td><td class="translation">‘Seksek’ went the wind, 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through sweetgum leaves, 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through silver-grass blossoms —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr><td><img src="images/pyiparshyng_transcription_02.png"></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>主人下馬客在船</td></tr>
+            <tr><td>Taiwanese: </td><td>chú-lîn || hā-má khek chāi-sôan</td></tr>
+            <tr><td></td><td class="translation">The host dismounted;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at boatside was the guest —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr><td><img src="images/pyiparshyng_transcription_03.png"></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>舉酒欲飲無管弦</td></tr>
+            <tr><td>Taiwanese: </td><td>kú-chiú || io̍k-ím bû-kóan-hiân</td></tr>
+            <tr><td></td><td class="translation">They raised their wine to drink;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;no flutes or strings there were —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr><td><img src="images/pyiparshyng_transcription_04.png"></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>醉不成歡慘將別</td></tr>
+            <tr><td>Taiwanese: </td><td>chuì put-sêng-hoan || chhám tsiong-pia̍t</td></tr>
+            <tr><td></td><td class="translation">Drunk, but not to the point of happiness — 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;miserable at parting —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr><td><img src="images/pyiparshyng_transcription_05.png"></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>別時茫茫江浸月</td></tr>
+            <tr><td>Taiwanese: </td><td>pia̍t-sî bông-bông || kang-chhim-go̍at</td></tr>
+            <tr><td></td><td class="translation">Vast it seemed, at parting — 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;river drenched moon —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr><td><img src="images/pyiparshyng_transcription_06.png"></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>忽聞水上琵琶聲</td></tr>
+            <tr><td>Taiwanese: </td><td>hut-bûn || suí-siōng pî-pâ-seng</td></tr>
+            <tr><td></td><td class="translation">Suddenly was heard
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the sound of a lute on the waters —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr><td><img src="images/pyiparshyng_transcription_07.png"></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+          <table class="transcriptiontext">
+            <tr><td>Chinese text: </td><td>主人忘歸客不發</td></tr>
+            <tr><td>Taiwanese: </td><td>chú-lîn bông-kui || khek put-hoat</td></tr>
+            <tr><td></td><td class="translation">The host forgot about going back;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the guest did not set off —</td></tr>
+          </table>
+          <br>
+          <table>
+            <tr><td><img src="images/pyiparshyng_transcription_08.png"></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div>
+        <p>END</p>
+        </div>
+      </div>
+
+  </body>
+</html>
