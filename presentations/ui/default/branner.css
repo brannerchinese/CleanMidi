@@ -1,5 +1,5 @@
 /* David Prager Branner */
-/* 20140214 */
+/* 20140911 */
 
 html, body {
     width: 100%;
@@ -7,11 +7,9 @@ html, body {
 
 table {
   border-collapse:collapse;
-/*  margin: 0 auto; */
   table-style="float:right";
   vertical-align:middle; 
   font-size:17pt;
-/*  text-align: center; */
 }
 
 .datarow {
@@ -19,7 +17,6 @@ table {
 }
 
 td {
-/*  border: .01em solid black; */
   padding:.2em;
   font-size:28pt;
 }
