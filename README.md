@@ -87,6 +87,8 @@ The script must be counted a failure, but I learned quite a lot by writing it. T
 
         sox -t raw -r 44100 -e signed -b 16 -c 1 <raw_file.raw> <sound_file.mp3>
 
+   But `sox` with these settings seems to change the pitch and speed of files, so they may need revision. 
+   
    On my system (Mac OS 10.9.4) I always specify the `soundfont` as `/usr/local/Cellar/fluid-synth/1.1.6/include/fluidsynth/GeneralUser_GS_FluidSynth_v1.44.sf2`. FluidSynth plus this long option-input can be saved to an alias or written into a script.
 
 ### Last reflections
